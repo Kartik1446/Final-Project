@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Event</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/create">Create Event</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Create Event</h1>
+        <form method="POST">
+            <label for="name">Event Name:</label>
+            <input type="text" id="name" name="name" placeholder="Event Name" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Location" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Description" required></textarea>
+
+            <button type="submit">Create</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Event Planner</p>
+    </footer>
+</body>
+</html>

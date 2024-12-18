@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/create">Create Event</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Your Events</h1>
+        <ul>
+            {% for event in events %}
+            <li>
+                <h2><a href="/event/{{ event.id }}">{{ event.name }}</a></h2>
+                <p>Date: {{ event.date }}</p>
+                <p>Location: {{ event.location }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Event Planner</p>
+    </footer>
+</body>
+</html>
